@@ -33,6 +33,23 @@ router.route('/edit/:id').put((req,res)=>{
         .catch(err=>res.json('Cannot update user. Error: '+err.message));
 })
 
+router.route('/login').post((req,res)=>{
+    var username = req.body.userName
+    var password = req.body.userPass
+    userData.findOne({username,password})
+        .then(user=>{
+            if(!user)
+                console.log('User not exists.')
+             else{
+                 console.log('Logged in')
+                 res.json('Logged in successfully')
+             }   
+        })
+        .catch(err=>{
+            console.log(err.message)
+        })    
+})
+
 module.exports = router;
 
   

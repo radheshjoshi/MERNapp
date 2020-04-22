@@ -8,6 +8,7 @@ export default class Index extends React.Component{
             <div className="jumbotron" style={{height:'100vh'}}>
                 <Link to='/signup' style={{width:'150px', margin:'20px'}} className="btn btn-lg btn-primary">SignUp</Link>
                 <Link to='/login' style={{width:'150px', margin:'20px'}} className="btn btn-lg btn-secondary">LogIn</Link>
+                <Link to='/usercollection' style={{width:'150px', margin:'20px'}} className="btn btn-lg btn-primary">Users</Link>
             </div>
         )
     }

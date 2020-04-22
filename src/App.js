@@ -3,6 +3,7 @@ import {BrowserRouter as Router, Route,Switch } from 'react-router-dom';
 import Index from './components/index';
 import Signup from './components/signup';
 import Login  from './components/login';
+import UsersData from './components/databse/database';
 // import logo from './logo.svg';
 // import './App.css';
 
@@ -19,6 +20,9 @@ class App extends Component {
             </Route>
             <Route path="/signup">
               <Signup/>
+            </Route>
+            <Route path="/usercollection">
+                <UsersData/>
             </Route>
         </Switch>
       </Router>
